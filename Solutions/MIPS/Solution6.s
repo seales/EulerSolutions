@@ -1,5 +1,5 @@
 main:
-	li 	$v0, 1  # syscall code to print an integer
+    li  $v0, 1  # syscall code to print an integer
     li  $t0, 100 # range, only input parameter
     li  $t5, 2 # holds the constant 2
 

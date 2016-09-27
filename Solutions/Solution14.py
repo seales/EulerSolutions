@@ -26,4 +26,4 @@ def collatz(initial_bound):
     return max_chain_index
 
 
-assert collatz(1000000) == 	837799
+assert collatz(1000000) ==  837799

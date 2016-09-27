@@ -3,18 +3,18 @@ import math
 def even_divisor_sum(n):
     count = 0
     for i in range(2, int(math.sqrt(n))):
-    	
+        
         if n % i == 0 and n != i:
-        	if i != n/i:
-        		count += i + (n/i)
-        	else:
-        		count += i
+            if i != n/i:
+                count += i + (n/i)
+            else:
+                count += i
     return count + 1
 
 def divisor_sums(n):
     sums = [0]*(n)
     for i in range(1, n+1):
-    	sums[i-1] = even_divisor_sum(i)
+        sums[i-1] = even_divisor_sum(i)
     return sums
 
 
@@ -24,7 +24,7 @@ def amicable_sums(n):
     b, a = 0, 0
      
     for i in range(n):
-    	i = int(i)
+        i = int(i)
         b = sums[i]
         a = i+1
         

@@ -27,7 +27,7 @@ void tests()
     assert(multipleSum(3, 5, 1000) == 233168); // Solution1
     assert(evenFibonacci(4000000) == 4613732); // Solution2
     assert(largestPrimeFactor(600851475143) == 6857); // Solution3
-    assert(longestPalindrome(3) == 	906609); // Solution4
+    assert(longestPalindrome(3) ==  906609); // Solution4
     assert(divisor(20) == 232792560); // Solution5
     assert(sumAndSquareDifference(100) == 25164150); // Solution6
     assert(nthPrime(10001) == 104743); // Solution7

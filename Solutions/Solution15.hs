@@ -16,14 +16,14 @@ cache = Map.fromList []
 
 updateCache :: (Map a  a , Eq b, Num b) => a -> b -> b -> b -> a
 updateCache cache keyPt1 keyPt2 value = do 
-	case Map.lookup cache (keyPt1,keyPt2) of 
-		Nothing -> let cache' = Map.insert (keyPt1, keyPt2) value cache' in cache'
-		Just value -> cache 
+    case Map.lookup cache (keyPt1,keyPt2) of 
+        Nothing -> let cache' = Map.insert (keyPt1, keyPt2) value cache' in cache'
+        Just value -> cache 
 
 
 updateIfExists :: (Ord a, Eq b, Num b) => b -> a -> a -> a -> b
 updateIfExists cache xCoord yCoord edge 
-	| elem (xCoord, yCoord) cache
+    | elem (xCoord, yCoord) cache
 
 -}
 
@@ -36,10 +36,10 @@ updateIfExists cache xCoord yCoord edge
 
 traverseUntilEdge :: (Eq a, Num a) => a -> a -> a -> a
 traverseUntilEdge xCoord yCoord edge 
-	| xCoord == edge = 1
-	| yCoord == edge = 1
-	| otherwise = (traverseUntilEdge (xCoord+1) yCoord edge) + (traverseUntilEdge xCoord (yCoord+1) edge)
-	
+    | xCoord == edge = 1
+    | yCoord == edge = 1
+    | otherwise = (traverseUntilEdge (xCoord+1) yCoord edge) + (traverseUntilEdge xCoord (yCoord+1) edge)
+    
 
 main = print (traverseUntilEdge 0 0 20)
 
