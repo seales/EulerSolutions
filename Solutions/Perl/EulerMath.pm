@@ -109,4 +109,9 @@ sub factors {
   sort {$a <=> $b} (keys %factors);
 }
 
+sub is_palindrome {
+  my $val = $_[0];
+  $val eq reverse($val);
+}
+
 1;
